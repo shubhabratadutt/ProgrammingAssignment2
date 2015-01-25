@@ -1,16 +1,18 @@
-## makeCacheMatrix function is used to build a special "matrix" object,
-## given an invertible matrix, that holds an inverrible matrix 
-## and its inverse. The cacheResolve function gets the inverse 
+## makeCacheMatrix function is used to build a special "matrix" object 
+## that provides functons to set and get the values of the invertibe 
+## matrix and its inverse.
+## The cacheResolve function gets the inverse 
 ## matrix cached in the speciaal "martix" object. If no cached 
 ## inverse is available, this function will calculate the 
-## inverse and save it the cache in the special "matrix" object. 
+## inverse and save it in the cache in the special "matrix" object. 
 ## Assumptions are:
 ## 1. The matrix is invertible
 ## 1. The matrix has not changed since its inverse
 ##    was calculated and cached
 
-## The following function creates and returns a special "matrix" object that 
-## holds the matrix passed to it and provides the following accessor functions
+## The following function creates and returns a special "matrix" 
+## object that provides the following accessor functions to 
+## manipulate the matrix and its inverse 
 ## 1. setMatrix - to store the matrix to be inverted
 ## 2. getMatrix - to get the stored matrix
 ## 3. setInverse - to set the value of the inverse cache
@@ -25,7 +27,7 @@ makeCacheMatrix <- function(x = matrix()) {
   ##The following function sets the value of the matrix
   set <- function(matrix){
     x <<- matrix
-    inveerseMatrix <<- NULL
+    inverseMatrix <<- NULL
   }
   
   ##The following function gets the value of the matrix
